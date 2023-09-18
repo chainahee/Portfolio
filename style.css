@@ -208,6 +208,203 @@ button i {
   background: #000;
 }
 
+.service {
+  min-height: 680px;
+  width: 100%;
+  display: flex;
+  padding: 5% 8%;
+  flex-direction: column;
+  background: rgb(234, 250, 26);
+  background: linear-gradient(
+    155deg,
+    rgba(234, 250, 26, 0.05) 0%,
+    rgba(237, 89, 222, 0.05) 39%,
+    rgba(41, 200, 241, 0.05) 66%,
+    rgba(237, 89, 222, 0.05) 100%
+  );
+}
+
+.service h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.service .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.service .cards .card {
+  height: 420px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8% 30px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.cards .card h2 {
+  font-weight: 500;
+  margin: 20px 0;
+  margin-bottom: 30px;
+}
+
+.card img {
+  width: 90px;
+}
+
+.resume-section {
+  padding: 100px 8%;
+  background: rgb(26, 250, 44);
+  background: linear-gradient(
+    93deg,
+    rgba(26, 250, 44, 0.1) 10%,
+    rgba(237, 89, 299, 0.1) 94%
+  );
+}
+
+.resume {
+  padding: 80px 8%;
+  border: 1px solid #000;
+  background: rgb(255, 255, 255);
+}
+
+.resume h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  background-image: -webkit-linear-gradient(180deg, #f8ed9c, #ffc745);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-wrapper .card {
+  width: 40%;
+}
+
+.card-wrapper h3 {
+  color: #aaaab7;
+  margin-top: 60px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #aaaab7;
+}
+
+.card-wrapper h2 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.card-wrapper p {
+  color: #4c4c4c;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.skills {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills div {
+  width: 40%;
+}
+
+.skills h2 {
+  margin-top: 60px;
+  color: #aaaab7;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #aaaab7;
+}
+
+.skills p {
+  color: #4c4c4c;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 60px;
+}
+
+.skills-img img {
+  margin-right: 5%;
+  margin-top: 50px;
+  width: 13%;
+  border: 1px solid #aaaab7;
+  border-radius: 10px;
+}
+
+.project-wrapper {
+  background: rgba(26, 250, 44);
+  background: linear-gradient(
+    93deg,
+    rgba(26, 250, 44, 0.1) 10%,
+    rgba(237, 89, 299, 0.1) 94%
+  );
+}
+
+.project {
+  padding: 80px 8%;
+}
+
+.project h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.project .card {
+  padding: 60px 40px 0 40px;
+  background-color: rgb(243, 288, 172);
+  display: flex;
+  justify-content: space-between;
+}
+
+.project .card .detail {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 45%;
+  align-items: flex-start;
+}
+
+.project .card .detail h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.project .card .detail p {
+  font-size: 18px;
+  color: #4c4c4c;
+  margin: 40px 0;
+}
+
+.project .img {
+  width: 60%;
+}
+
+.project .img img {
+  width: 100%;
+}
+
 /* *********************************************** */
 
 @media (max-width: 1100px) {
@@ -269,6 +466,67 @@ button i {
   .container::after {
     top: 50%;
   }
+
+  .service .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .service .cards .card {
+    width: 100%;
+    height: 340px;
+    padding: 10% 8%;
+  }
+
+  .service h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  .resume h1 {
+    text-align: center;
+  }
+  .project-wrapper h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .card-wrapper .card {
+    width: 100%;
+  }
+
+  .skills {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skills div {
+    width: 100%;
+  }
+
+  .project .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project .card .detail {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .project .img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -278,5 +536,9 @@ button i {
 
   .hero-img img {
     width: 100%;
+  }
+  .service h1 {
+    font-size: 2rem;
+    z-index: 1;
   }
 }
