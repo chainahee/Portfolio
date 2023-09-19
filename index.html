@@ -11,191 +11,175 @@
     />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="home">
       <div class="header">
         <div class="logo">
           <img src="/assets//icon.png" alt="" />
           <span>Supat.CH</span>
         </div>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Experient</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        <button>Contact <i class="fa fa-arrow-right"></i></button
+        <button>
+          <a href="#contact">
+            Contact <i class="fa fa-arrow-right"></i
+          ></a></button
         ><i class="fa fa-bars" aria-hidden="true"></i>
       </div>
-      <div class="hero">
-        <div class="content">
-          <h1>Hey there It's</h1>
-          <h1>Supat.CH</h1>
-          <p>Frontend Developer</p>
-          <button>
-            Say Hello<i class="fa fa-arrow-right" aria-hidden="true"></i>
-          </button>
-        </div>
-        <div class="hero-img">
-          <img src="/assets/Img1.png" alt="" />
-        </div>
-      </div>
-    </div>
-    <div class="service">
-      <h1>Provide Service<i class="fa fa-tasks" aria-hidden="true"></i></h1>
-      <div class="cards">
-        <div class="card">
-          <img src="/assets/icon-code.png" alt="" />
+      <section class="hidden">
+        <div class="hero">
           <div class="content">
-            <h2>Web Development</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-              cumque consectetur accusamus ipsam sunt! Ea, omnis! Corporis
-              dolore officiis doloremque.
-            </p>
+            <h1>Hey there It's</h1>
+            <h2>Supat.CH</h2>
+            <p>Frontend Developer</p>
+            <button>
+              Say Hello<i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="hero-img">
+            <img src="/assets/Img1.png" alt="" />
           </div>
         </div>
-        <div class="card">
-          <img src="/assets/icon-code.png" alt="" />
-          <div class="content">
-            <h2>Web Development</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-              cumque consectetur accusamus ipsam sunt! Ea, omnis! Corporis
-              dolore officiis doloremque.
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="/assets/icon-code.png" alt="" />
-          <div class="content">
-            <h2>Web Development</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-              cumque consectetur accusamus ipsam sunt! Ea, omnis! Corporis
-              dolore officiis doloremque.
-            </p>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
 
-    <div class="resume-section">
-      <div class="resume">
-        <div class="detail">
-          <h1>Resume</h1>
-          <div class="card-wrapper">
-            <div class="card">
-              <h3>Work Experience</h3>
-              <div class="">
-                <h2>IT Support</h2>
-                <p>March 2022 - Present</p>
-              </div>
-              <div class="">
-                <h2>Librarian</h2>
-                <p>May 2018 - March 2022</p>
-              </div>
+    <div class="service" id="service">
+      <section class="hidden">
+        <h1>What Can I Do<i class="fa fa-tasks" aria-hidden="true"></i></h1>
+        <div class="cards">
+          <div class="card">
+            <img src="/assets/icon-itsupport.png" alt="" />
+            <div class="content">
+              <h2>IT Support</h2>
+              <p>
+                Working as IT Support has given me the expertise to collaborate
+                with others and understand the needs of users and development
+                teams.
+              </p>
             </div>
-            <div class="card">
-              <h3>Education</h3>
-              <div class="">
-                <h2>Information Technology</h2>
-                <p>Major Information Study</p>
-                <p>July 2015 - March 2018</p>
-              </div>
-              <div class="">
-                <h2>Keangkhrowittaya School</h2>
-                <p>2012 - 2015</p>
-              </div>
+          </div>
+          <div class="card">
+            <img src="/assets/icon-code.png" alt="" />
+            <div class="content">
+              <h2>Website Design</h2>
+              <p>
+                Analyze the websites of university archives in Thailand to
+                design a website template that is a prototype for a university
+                that does not yet have one.
+              </p>
             </div>
           </div>
         </div>
-        <div class="skills">
-          <div class="">
-            <h2>Skills</h2>
-            <p>HTML, CSS</p>
-            <p>Front-end Development</p>
-            <p>Javascript</p>
-            <p>React JS, Next JS, React Native</p>
-          </div>
-          <div class="skills-img">
-            <h2>Tools</h2>
-            <img src="/assets/icons8-figma-40.png" alt="" />
-            <img src="/assets/icons8-react-40.png" alt="" />
-            <img src="/assets/icons8-vs-code-48.png" alt="" />
-            <img src="/assets/icons8-github-48.png" alt="" />
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
 
-    <div class="project-wrapper">
-      <div class="project">
-        <h1>Project</h1>
-        <div class="card">
+    <div class="resume-section" id="resume">
+      <section class="hidden">
+        <div class="resume">
           <div class="detail">
-            <h2>Borrow and Return Systems</h2>
-            <p>Next JS and MongoDB</p>
-            <span>Developing</span>
-            <button>View Project</button>
+            <h1>Resume</h1>
+            <div class="card-wrapper">
+              <div class="card">
+                <h3>Work Experience</h3>
+                <div class="">
+                  <h2>IT Support</h2>
+                  <p>March 2022 - Present</p>
+                </div>
+                <div class="">
+                  <h2>Librarian</h2>
+                  <p>May 2018 - March 2022</p>
+                </div>
+              </div>
+              <div class="card">
+                <h3>Education</h3>
+                <div class="">
+                  <h2>Information Technology</h2>
+                  <p>Major Information Study</p>
+                  <p>July 2015 - March 2018</p>
+                </div>
+                <div class="">
+                  <h2>Keangkhrowittaya School</h2>
+                  <p>2012 - 2015</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="img">
-            <img src="/assets/BRS-project.png" alt="" />
+          <div class="skills">
+            <div class="">
+              <h2>Skills</h2>
+              <p>HTML, CSS</p>
+              <p>Front-end Development</p>
+              <p>Javascript</p>
+              <p>React JS, Next JS, React Native</p>
+              <p>MySQL, MongoDB</p>
+            </div>
+            <div class="skills-img">
+              <h2>Tools</h2>
+              <img src="/assets/icons8-figma-40.png" alt="" />
+              <img src="/assets/icons8-react-40.png" alt="" />
+              <img src="/assets/icons8-vs-code-48.png" alt="" />
+              <img src="/assets/icons8-github-48.png" alt="" />
+              <img src="/assets/icons8-trello-48.png" alt="" />
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="detail">
-            <h2>Library</h2>
-            <p>HTML CSS Design</p>
-            <button>View Project</button>
-          </div>
-          <div class="img">
-            <img src="/assets/Library-project.png" alt="" />
-          </div>
-        </div>
-        <div class="card">
-          <div class="detail">
-            <h2>Credite Card UI</h2>
-            <p>HTML CSS Design</p>
-            <button>View Project</button>
-          </div>
-          <div class="img">
-            <img src="/assets/Credite-Card-project.png" alt="" />
-          </div>
-        </div>
-        <div class="card">
-          <div class="detail">
-            <h2>Portfolio</h2>
-            <p>HTML CSS Design</p>
-            <button>View Project</button>
-          </div>
-          <div class="img">
-            <img src="/assets/Portfolio-project.png" alt="" />
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
 
-    <div class="footer">
-      <div class="footer-content">
-        <h1>Have a project in mind</h1>
-        <h1>Let's get to work</h1>
-        <button>say hello<i class="fa fa-arrow-up"></i></button>
-      </div>
-      <div class="bottom-content">
-        <div class="icons">
-          <div class="icon">
-            <i class="fa-brands fa-facebook-f"></i>
+    <div class="project-wrapper" id="project">
+      <section class="hidden">
+        <div class="project">
+          <h1>Project Developing</h1>
+          <div class="card">
+            <div class="detail">
+              <h2>Borrow and Return Systems</h2>
+              <p>Next JS and MongoDB</p>
+              <button>View Project</button>
+            </div>
+            <div class="img">
+              <img src="/assets/BRS-project.png" alt="" />
+            </div>
           </div>
-          <div class="icon">
-            <i class="fa-brands fa-github"></i>
-          </div>
-          <div class="icon">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </div>
+      </section>
+    </div>
+
+    <section class="hidden">
+      <div class="footer" id="contact">
+        <div class="footer-content">
+          <h1>Have a project in mind</h1>
+          <h1>Let's get to work</h1>
+          <img src="/assets/icon2.png" alt="" id="animatedImage" />
+          <button>say hello<i class="fa fa-arrow-up"></i></button>
+        </div>
+        <div class="bottom-content">
+          <div class="icons">
+            <div class="icon">
+              <a
+                href="https://www.facebook.com/supat.chainahee1995"
+                target="_blank"
+              >
+                <i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </div>
+            <div class="icon">
+              <a href="https://github.com/chainahee" target="_blank">
+                <i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+            <div class="icon">
+              <a href="mailto:supat.chai1746@gmail.com" target="_blank"
+                ><i class="fa fa-envelope" aria-hidden="true"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>

@@ -13,6 +13,19 @@ html {
   scroll-behavior: smooth;
 }
 
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+  transform: translateX(-100%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 .container {
   min-height: 100vh;
   width: 100%;
@@ -38,6 +51,7 @@ html {
   border-radius: 50%;
   filter: blur(60px);
   opacity: 0.5;
+  z-index: -1;
 }
 
 .header {
@@ -49,7 +63,11 @@ html {
   padding: 0 8%;
   background: transparent;
   position: relative;
-  padding-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: fixed;
+  z-index: 9999;
+  transition: 0.6s;
 }
 
 .logo {
@@ -109,6 +127,10 @@ button {
   z-index: 1;
 }
 
+button a {
+  color: #42210b;
+}
+
 button:after {
   position: absolute;
   content: "";
@@ -127,6 +149,9 @@ button:hover:after {
 }
 
 button:hover {
+  color: #fff;
+}
+button:hover a {
   color: #fff;
 }
 
@@ -155,6 +180,7 @@ button i {
   min-height: 100vh;
   width: 100%;
   display: flex;
+  align-items: flex-start;
   padding: 0 8%;
 }
 
@@ -170,11 +196,20 @@ button i {
 }
 
 .hero .content h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   letter-spacing: 0.5rem;
   line-height: 4rem;
   margin-top: 2rem !important;
   margin: 10px 0;
+}
+
+.hero .content h2 {
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  line-height: 4rem;
+  margin-top: 2rem !important;
+  margin: 10px 0;
+  color: #ffcb05;
 }
 
 .hero .content p {
@@ -187,7 +222,7 @@ button i {
 .hero-img {
   height: 100%;
   width: 50%;
-  z-index: 1;
+  z-index: 99;
   margin-top: 3rem;
   justify-content: center;
   align-items: center;
@@ -195,8 +230,8 @@ button i {
 }
 
 .hero-img img {
-  height: 65%;
-  width: 65%;
+  height: 75%;
+  width: 75%;
 }
 
 .hero .content button {
@@ -256,6 +291,10 @@ button i {
   font-weight: 500;
   margin: 20px 0;
   margin-bottom: 30px;
+}
+
+.cards .card p {
+  text-align: justify;
 }
 
 .card img {
@@ -319,7 +358,7 @@ button i {
 }
 
 .skills {
-  margin-top: 80px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
 }
@@ -372,7 +411,7 @@ button i {
 }
 
 .project .card {
-  padding: 60px 40px 0 40px;
+  padding: 60px 40px 30px 40px;
   background-color: rgb(243, 288, 172);
   display: flex;
   justify-content: space-between;
@@ -405,6 +444,90 @@ button i {
   width: 100%;
 }
 
+.footer {
+  padding: 80px 8%;
+  background: rgb(255, 255, 254);
+  background: linear-gradient(
+    163deg,
+    rgba(255, 255, 254, 1) 0%,
+    rgba(255, 255, 155, 0.5) 21%,
+    rgb(255, 255, 232) 32%,
+    rgb(255, 255, 232) 32%,
+    rgb(255, 255, 254) 85%,
+    rgb(255, 255, 155) 100%
+  );
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(76, 76, 76, 0.4);
+  padding-bottom: 80px;
+}
+
+.footer-content h1 {
+  font-size: 3rem;
+}
+
+.footer-content img {
+  width: 150px;
+  padding: 1rem 0;
+}
+
+.bottom-content {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-content .icons {
+  display: flex;
+  gap: 20px;
+}
+
+.bottom-content .icons .icon {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.6s;
+}
+
+.bottom-content .icons .icon i {
+  color: #42210b;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom-content .icons .icon:hover {
+  transform: translateY(-8px);
+}
+
+.navbg {
+  background: rgba(255, 255, 255, 1);
+}
+
+#animatedImage {
+  animation: moveImage 2s linear infinite alternate;
+}
+
+@keyframes moveImage {
+  0% {
+    transform: translateY(0); /* ตำแหน่งเริ่มต้น */
+  }
+  50% {
+    transform: translateY(-20px); /* ตำแหน่งครึ่งทางขึ้น */
+  }
+  100% {
+    transform: translateY(0); /* ตำแหน่งสุดท้าย */
+  }
+}
+
 /* *********************************************** */
 
 @media (max-width: 1100px) {
@@ -419,6 +542,9 @@ button i {
     transition: 0.6s;
     border-bottom: 2px solid #42210b;
     opacity: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    z-index: 2;
   }
   ul li {
     display: block;
@@ -458,7 +584,7 @@ button i {
 
   .hero .content {
     min-height: 460px;
-    margin-top: 0;
+    margin-top: 30%;
     justify-content: flex-start;
     text-align: center;
   }
@@ -489,8 +615,17 @@ button i {
     text-align: center;
   }
   .project-wrapper h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
     text-align: center;
+  }
+  .footer-content h1 {
+    font-size: 1.9rem;
+    margin: 12px 0;
+  }
+
+  .bottom-content {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -531,6 +666,10 @@ button i {
 
 @media (max-width: 500px) {
   .hero .content h1 {
+    font-size: 2rem;
+  }
+
+  .hero .content h2 {
     font-size: 2.5rem;
   }
 
@@ -540,5 +679,23 @@ button i {
   .service h1 {
     font-size: 2rem;
     z-index: 1;
+  }
+
+  .footer-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .footer-content img {
+    width: 25%;
+  }
+
+  .project .card .detail h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
   }
 }
