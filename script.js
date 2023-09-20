@@ -31,5 +31,5 @@ hiddenElements.forEach((el) => observer.observe(el));
 document.addEventListener("DOMContentLoaded", () => {
   const animatedImage = document.getElementById("animatedImage");
 
-  animatedImage.style.animationPlayState = "running"; // เริ่มการเคลื่อนไหว
+  animatedImage.style.animationPlayState = "running";
 });
