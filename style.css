@@ -285,6 +285,8 @@ button i {
   text-align: center;
   background: #fff;
   border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.6s;
 }
 
 .cards .card h2 {
@@ -486,6 +488,18 @@ button i {
   gap: 20px;
 }
 
+.bottom-content .links {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.bottom-content .links i {
+  font-size: 1.5rem;
+  color: #ffcb05;
+}
+
 .bottom-content .icons .icon {
   height: 50px;
   width: 50px;
@@ -506,6 +520,49 @@ button i {
 
 .bottom-content .icons .icon:hover {
   transform: translateY(-8px);
+}
+
+.bottom-content .address {
+  width: 400px;
+}
+
+.bottom-content .contact {
+  width: 250px;
+}
+
+.bottom-content .address .detail {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.bottom-content .address p {
+  color: #221203;
+}
+
+.bottom-content .address .detail i {
+  font-size: 1.5rem;
+  color: #ffcb05;
+}
+
+.bottom-content .contact .detail {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.bottom-content .contact .detail i {
+  font-size: 1.5rem;
+  color: #ffcb05;
+}
+
+.bottom-content .contact p {
+  color: #221203;
+}
+.bottom-content .contact p a {
+  color: #221203;
 }
 
 .navbg {
@@ -627,6 +684,19 @@ button i {
     flex-direction: column;
     align-items: center;
   }
+
+  .bottom-content .detail .links {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bottom-content .address {
+    width: 100%;
+  }
+
+  .bottom-content .contact {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -661,6 +731,30 @@ button i {
 
   .project .img {
     width: 100%;
+  }
+
+  .bottom-content .address {
+    margin-top: 2rem;
+  }
+
+  .bottom-content .address .detail {
+    justify-content: center;
+  }
+
+  .bottom-content .address p {
+    text-align: center;
+  }
+
+  .bottom-content .contact {
+    margin-top: 2rem;
+  }
+
+  .bottom-content .contact .detail {
+    justify-content: center;
+  }
+
+  .bottom-content .contact p {
+    text-align: center;
   }
 }
 
